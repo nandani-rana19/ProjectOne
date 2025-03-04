@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Quicksand:wght@400;600&display=swap');
+
+:root {
+  --background-color: #440354;
+  --primary-color: #ffffff;
+  --accent-color: #D9A5B3;
+  --soft-teal: #bbf4e5;
+  --text-color: #ffffff;
+  --light-text: #e4b2e2;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav a {
+  color: blueviolet;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  justify-content: center;
+}
+
+
+nav {
+  background: var(--soft-teal);
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+.logo img {
+  width: 85px;
+  height: auto;
+  animation: blink 2s infinite;
+}
+
+
+
+nav a:hover {
+  color: var(--accent-color);}
+
+.active-nav {
+  color: var(--accent-color);
+  position: relative;
+}
+
+.active-nav::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent-color);
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5em;
+  color: var(--primary-color);
+  margin-top: 40px;
+}
+
+h2 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.5em;
+  color: var(--soft-teal);
+  margin: 40px 0 30px;
+}
+
+h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2em;
+  color: var(--accent-color);
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+a {
+  color: var(--soft-teal);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+a:hover {
+  color: var(--accent-color);
+  transform: scale(1.05);
+}
+
+
+.lists-container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+.songs-section {
+  border: 3px solid var(--accent-color);
+  border-radius: 15px;
+  padding: 30px 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+}
+
+.songs-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.songs-list li {
+  position: relative;
+  width: 200px;
+  text-align: center;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.songs-list li:hover {
+  transform: scale(1.05);
+}
+
+.songs-list img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+
+.songs-list img:hover {
+  transform: scale(1.03);
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+
+.songs-list {
+  counter-reset: song-counter;
+}
+
+.songs-list li::before {
+  counter-increment: song-counter;
+  content: counter(song-counter);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--accent-color);
+  color: var(--background-color);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  z-index: 1;
+}
+
+
+.meals-section {
+  border: 3px solid var(--soft-teal);
+  border-radius: 15px;
+  padding: 30px 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.meals-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.meal-item {
+  width: 200px;
+  text-align: center;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.meal-item:hover {
+  transform: scale(1.05);
+}
+
+.meal-item img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+
+.meal-item img:hover {
+  transform: scale(1.03);
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+
+footer {
+  margin-top: 60px;
+  padding: 30px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.ig {
+  width: 50px;
+  height: auto;
+  transition: 0.3s;
+}
+
+.ig:hover {
+  transform: scale(1.1);
+}
+

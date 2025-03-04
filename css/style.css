@@ -1,0 +1,101 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Quicksand:wght@400;600&display=swap');
+
+
+:root {
+    --background-color: #440354;
+    --primary-color: #ffffff;
+    --accent-color: #D9A5B3;
+    --soft-teal: #bbf4e5;
+    --text-color: #ffffff;
+    --light-text: #e4b2e2;
+}
+
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+
+nav a {
+    color: blueviolet;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    justify-content: center;
+}
+
+
+nav {
+    background: var(--soft-teal);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+  }
+  
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+  }
+  
+  .logo img {
+    width: 85px;
+    height: auto;
+    animation: blink 2s infinite;
+  }
+
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    color: var(--primary-color);
+}
+
+h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5em;
+    color: var(--soft-teal);
+}
+
+
+img {
+    width: 500px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 10px rgba(rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255), alpha);
+    transition: 0.3s;
+    
+}
+img:hover {
+    transform: scale(1.05);
+}
+
+
+p {
+    width: 60%;
+    margin: auto;
+    line-height: 1.8;
+    color:white;
+    transition: 0.3s;
+    
+}
+
+.ig {
+    width: 50px;
+    height: auto;
+}
+
+
+
+
