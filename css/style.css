@@ -1,6 +1,4 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Quicksand:wght@400;600&display=swap');
-
 
 :root {
     --background-color: #440354;
@@ -11,7 +9,6 @@
     --light-text: #e4b2e2;
 }
 
-
 body {
     font-family: 'Quicksand', sans-serif;
     background-color: var(--background-color);
@@ -21,6 +18,13 @@ body {
     text-align: center;
 }
 
+nav {
+    background: var(--soft-teal);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
 
 nav a {
     color: blueviolet;
@@ -28,33 +32,22 @@ nav a {
     font-weight: 600;
     letter-spacing: 1px;
     transition: 0.3s;
-    justify-content: center;
 }
-
-
-nav {
-    background: var(--soft-teal);
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-    gap: 100px;
-  }
-  
-  @keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 0.3; }
-    100% { opacity: 1; }
-  }
-  
-  .logo img {
-    width: 85px;
-    height: auto;
-    animation: blink 2s infinite;
-  }
-
 
 nav a:hover {
     color: var(--accent-color);
+}
+
+.logo img {
+    width: 85px;
+    height: auto;
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
 }
 
 h1 {
@@ -69,33 +62,42 @@ h2 {
     color: var(--soft-teal);
 }
 
-
-img {
-    width: 500px;
-    border-radius: 15px;
-    box-shadow: 4px 4px 10px rgba(rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255), alpha);
-    transition: 0.3s;
-    
+/* Flexbox Container for Image and Text */
+.content-container {
+    display: flex;
+    align-items: flex-start; /* Aligns the image slightly higher */
+    justify-content: center;
+    gap: 50px; /* Increased spacing between image and text */
+    padding: 50px;
+    max-width: 80%;
+    margin: auto;
+    text-align: left; /* Aligns text properly */
 }
-img:hover {
+
+.content-container img {
+    width: 400px; /* Increased image size */
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.3);
+    transition: 0.3s;
+    margin-top: -20px; 
+}
+
+.content-container img:hover {
     transform: scale(1.05);
 }
 
-
-p {
-    width: 60%;
-    margin: auto;
+.content-container p {
+    flex: 1; 
     line-height: 1.8;
-    color:white;
-    transition: 0.3s;
-    
+    color: white;
+}
+
+footer {
+    margin-top: 50px;
 }
 
 .ig {
     width: 50px;
     height: auto;
 }
-
-
-
-
